@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aMAZEing Labyrinth</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <div id="menu" class="liladiv">
+
+        <div>
+            <h1>aMAZEing Labyrinth</h1>
+            <hr>
+            <h3>Beállítások</h3>
+            <label for="playernum">A játékosok száma(1-4):</label>
+            <input name="playernum" type="number" id="playernum" min="1" max="4" value="2"><br>
+            <label for="treasurenum">A kincsek száma(1-24/játékosok száma):</label>
+            <input name="treasurenum" type="number" id="treasurenum" min="1" max="24" value="2">
+            <hr>
+            <button id="newgame">Játék indítása</button>
+            <button id="gamedesc">Játékleírás</button>
+        </div>
+    </div>
+
+    <div id="game" style="display: none;">
+        <div id="panel">
+            <button id="restart">Új játék</button>
+            <button id="quit">Kilépés</button>
+        </div>
+        <h1 id="winner" style="display: none;"></h1>
+        <div id="inner">
+            <div id="arrows"></div>
+            <table cellspacing="0" id="tablearea"></table>
+            <div id="info">
+                <div class="out">
+                    <p>A külső elem:</p>
+                    <div id="outarea"></div>
+                </div>
+                <div id="stats"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desc" class="liladiv" style="display: none;">
+        <h3>A játék leírása</h3>
+        <hr>
+        <p>
+            A katakomba szobáit egy 7x7-es négyzetrács cellái jelképezik. Minden szoba esetén adott, hogy mely falain van ajtó. Ha két szomszédos szoba érintkező falán egy-egy ajtó van, akkor át lehet menni egyik szobából a másikba. A négyzetrács páros sorait és
+            oszlopait el lehet tolni, a többi szoba végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül utak nyílnak a szobák között, így lehet eljutni a kincsekhez. Mindegyik kérő arra törekszik, hogy a katakomba szobáinak ötletes eltolásával
+            eljusson a kincsekhez. Aki elsőként találja meg mindahányat és kiindulópontjára sikeresen visszaérkezik az a nyertes.
+        </p>
+        <hr>
+        <p>
+            A kint lévő szoba bal kattintással forgatható és a nyílra kattintva betolható a megfelelő sorba. <br> 1. A katakonbába be kell csúsztani a kimaradt szobát, <br> 2. majd a figurával lépni a zöld mezők egyikére. <br> Minden kincs megtalálása
+            után vissza kell térni a kiinduló szobába.
+        </p>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
